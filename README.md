@@ -27,7 +27,7 @@ GitHub Copilot の **Ask モード** を使い、生成されたコードの内�
 ## 開発環境
 
 本リポジトリには Dev Container の設定が含まれています。  
-VS Code と Docker があれば、すぐに開発環境を起動できます。
+**GitHub Codespaces** を使って、すぐに開発環境を起動できます。
 
 - Python 3.12
 - Node.js 20
