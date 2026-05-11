@@ -1,6 +1,17 @@
 {
   "name": "Inventory Hands-on",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "forwardPorts": [5173, 8000],
+  "portsAttributes": {
+    "5173": {
+      "label": "Frontend (Vite)",
+      "onAutoForward": "openPreview"
+    },
+    "8000": {
+      "label": "Backend API (FastAPI)",
+      "onAutoForward": "silent"
+    }
+  },
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.12"
@@ -9,7 +20,7 @@
       "version": "20"
     }
   },
-  "postCreateCommand": "echo 'Dev container ready. See SPEC.md to get started.'",
+  "postCreateCommand": "python3 -m pip install -r backend/requirements.txt && cd frontend && npm install && echo 'Dev container ready. See SPEC.md to get started.'",
   "customizations": {
     "vscode": {
       "extensions": [
