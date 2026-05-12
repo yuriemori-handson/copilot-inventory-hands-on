@@ -36,7 +36,7 @@ description: "Use when: implementing features on the inventory management hands-
 
 ### ファイル分割と可読性
 
-- 責務を明確に分割：bak/store.py（データ層）、models.py（スキーマ）、main.py（API ルート）
+- 責務を明確に分割：backend/store.py（データ層）、backend/models.py（スキーマ）、backend/main.py（API ルート）
 - フロント：services/api.ts（通信）、types/product.ts（型）、components/*.tsx（UI）
 - 各ファイルは 150 〜 200 行以内を目安に、読みやすさを優先。
 

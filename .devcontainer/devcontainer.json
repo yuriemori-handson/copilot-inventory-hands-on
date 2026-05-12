@@ -20,7 +20,7 @@
       "version": "20"
     }
   },
-  "postCreateCommand": "python3 -m pip install -r backend/requirements.txt && cd frontend && npm install && echo 'Dev container ready. See SPEC.md to get started.'",
+  "postCreateCommand": "if [ -f backend/requirements.txt ]; then python3 -m pip install -r backend/requirements.txt; else echo 'Skip pip install: backend/requirements.txt not found'; fi && if [ -d frontend ]; then cd frontend && npm install; else echo 'Skip npm install: frontend directory not found'; fi && echo 'Dev container ready. See SPEC.md to get started.'",
   "customizations": {
     "vscode": {
       "extensions": [
